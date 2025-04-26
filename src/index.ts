@@ -79,3 +79,9 @@ updateProfile('hobbies', ['coding', 'reading']);
 updateProfile('age', 31);
 
 console.log(profile);
+
+function exportProfileToJSON() {
+    const visibleProfile = getVisibleProfile(); 
+    const json = JSON.stringify(visibleProfile, null, 2);  
+    return json; 
+};
