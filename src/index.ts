@@ -1,4 +1,4 @@
-const profile = {
+let profile = {
     name: 'Caroline',
     age: 30,
     hobbies: ['photography', 'dance', 'guitar', 'writing']
@@ -69,3 +69,13 @@ function showProfile() {
 };
 
 showProfile();
+
+function updateProfile<Key extends ProfileKeys>(key: Key, newValue: Profile[Key]) {
+    profile[key] = newValue;
+};
+
+updateProfile('name', 'Anna');
+updateProfile('hobbies', ['coding', 'reading']);
+updateProfile('age', 31);
+
+console.log(profile);
