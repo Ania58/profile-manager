@@ -44,3 +44,13 @@ function resetVisibility(allVisible: boolean) {
 };
 resetVisibility(true);
 console.log(visibilitySettings);
+
+function toggleVisibility(key: ProfileKeys) {
+    if (visibilitySettings[key] === true) {
+        visibilitySettings[key] = false
+    } else {
+        visibilitySettings[key] = true
+    }
+};
+toggleVisibility('age');
+console.log(visibilitySettings);
