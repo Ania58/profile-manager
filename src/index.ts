@@ -37,4 +37,10 @@ setVisibility('age', false);
 setVisibility('hobbies', true);
 console.log(getVisibleProfile());
   
-  
+function resetVisibility(allVisible: boolean) {
+    for (const key in profile) {
+        visibilitySettings[key as ProfileKeys] = allVisible;
+    }
+};
+resetVisibility(true);
+console.log(visibilitySettings);
