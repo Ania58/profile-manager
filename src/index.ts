@@ -54,3 +54,18 @@ function toggleVisibility(key: ProfileKeys) {
 };
 toggleVisibility('age');
 console.log(visibilitySettings);
+
+function showProfile() {
+    const visibleProfile = getVisibleProfile();
+    for (const key in visibleProfile) {
+        const typedKey = key as keyof Profile;
+
+        if (Array.isArray(visibleProfile[typedKey])) {
+            console.log(`${key} : ${(visibleProfile[typedKey]as string[]).join(',')}`);
+        } else {
+            console.log(`${key} : ${visibleProfile[typedKey]}`);
+        }
+    }
+};
+
+showProfile();
